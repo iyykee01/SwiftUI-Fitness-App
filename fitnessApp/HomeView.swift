@@ -7,15 +7,25 @@
 
 import SwiftUI
 
-struct HomeView: View {
+var mockActivities = [
+    Activity(id: 0, title: "Today's Step", subtitle: "Goal 12,000", image: "figure.walk", tintColor: .green, amount: "6,120"),
     
+    Activity(id: 1, title: "Today's Step", subtitle: "Goal 12,000", image: "figure.walk", tintColor: .green, amount: "6,120"),
+    
+    Activity(id: 2, title: "Today's Step", subtitle: "Goal 12,000", image: "figure.walk", tintColor: .green, amount: "6,120"),
+    
+    Activity(id: 4, title: "Today's Step", subtitle: "Goal 12,000", image: "figure.walk", tintColor: .green, amount: "6,120")
+]
+
+
+struct HomeView: View {
     @State var calories: Int = 123
     @State var active: Int = 53
     @State var stand: Int = 8
     
     var body: some View {
         ScrollView(showsIndicators: false) {
-            VStack() {
+            VStack(alignment: .leading) {
                 Text("Welcome")
                     .font(.largeTitle)
                     .padding()
@@ -43,12 +53,35 @@ struct HomeView: View {
                             .padding(.all, 40)
                     }
                     .padding(.horizontal)
-                    
-                    Spacer()
                 }
                 .padding()
+                
+                
+                HStack() {
+                    Text("Fitness Activity")
+                    
+                    Spacer()
+                    Button(action: {
+                        print("Show more")
+                    }, label: {
+                        Text("Show more")
+                            .padding(.init(top: 10, leading: 15, bottom: 10, trailing: 15))
+                            .foregroundColor(.white)
+                            .background(.blue)
+                            .cornerRadius(20)
+                    })
+                }
+                .padding(.init(top: 20, leading: 15, bottom: 10, trailing: 15))
+                
+                LazyVGrid(columns: Array(repeating: GridItem(spacing: 20), count: 2)) {
+                    
+                    ForEach(mockActivities, id: \.id) { activity in
+                        ActivityCard(activity: activity)
+                    }
+
+                }
+                .padding(.horizontal)
             }
-           
         }
     }
 }

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		6B16FFD72D08FA9B00F0B07F /* fitnessAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B16FFD62D08FA9B00F0B07F /* fitnessAppApp.swift */; };
-		6B16FFD92D08FA9B00F0B07F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B16FFD82D08FA9B00F0B07F /* ContentView.swift */; };
 		6B16FFDB2D08FA9F00F0B07F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B16FFDA2D08FA9F00F0B07F /* Assets.xcassets */; };
 		6B16FFDE2D08FA9F00F0B07F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B16FFDD2D08FA9F00F0B07F /* Preview Assets.xcassets */; };
 		6B3FBE612D090132008FC23B /* FitnessTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3FBE602D090132008FC23B /* FitnessTabView.swift */; };
@@ -16,12 +15,12 @@
 		6B3FBE652D09027A008FC23B /* HistoricDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3FBE642D09027A008FC23B /* HistoricDataView.swift */; };
 		6B3FBE6A2D0907B4008FC23B /* FitnessWidgets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3FBE692D0907B4008FC23B /* FitnessWidgets.swift */; };
 		6B3FBE6C2D090C2E008FC23B /* ProgressCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3FBE6B2D090C2E008FC23B /* ProgressCircleView.swift */; };
+		6B3FBE712D091920008FC23B /* ActivityCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3FBE702D091920008FC23B /* ActivityCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6B16FFD32D08FA9B00F0B07F /* fitnessApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fitnessApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B16FFD62D08FA9B00F0B07F /* fitnessAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fitnessAppApp.swift; sourceTree = "<group>"; };
-		6B16FFD82D08FA9B00F0B07F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6B16FFDA2D08FA9F00F0B07F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6B16FFDD2D08FA9F00F0B07F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6B3FBE602D090132008FC23B /* FitnessTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessTabView.swift; sourceTree = "<group>"; };
@@ -29,6 +28,7 @@
 		6B3FBE642D09027A008FC23B /* HistoricDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricDataView.swift; sourceTree = "<group>"; };
 		6B3FBE692D0907B4008FC23B /* FitnessWidgets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessWidgets.swift; sourceTree = "<group>"; };
 		6B3FBE6B2D090C2E008FC23B /* ProgressCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressCircleView.swift; sourceTree = "<group>"; };
+		6B3FBE702D091920008FC23B /* ActivityCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,14 +61,14 @@
 		6B16FFD52D08FA9B00F0B07F /* fitnessApp */ = {
 			isa = PBXGroup;
 			children = (
+				6B3FBE6D2D0917E7008FC23B /* Home */,
 				6B3FBE662D09077B008FC23B /* components */,
 				6B16FFD62D08FA9B00F0B07F /* fitnessAppApp.swift */,
-				6B16FFD82D08FA9B00F0B07F /* ContentView.swift */,
 				6B16FFDA2D08FA9F00F0B07F /* Assets.xcassets */,
 				6B16FFDC2D08FA9F00F0B07F /* Preview Content */,
 				6B3FBE602D090132008FC23B /* FitnessTabView.swift */,
-				6B3FBE622D090236008FC23B /* HomeView.swift */,
 				6B3FBE642D09027A008FC23B /* HistoricDataView.swift */,
+				6B3FBE622D090236008FC23B /* HomeView.swift */,
 			);
 			path = fitnessApp;
 			sourceTree = "<group>";
@@ -86,8 +86,16 @@
 			children = (
 				6B3FBE692D0907B4008FC23B /* FitnessWidgets.swift */,
 				6B3FBE6B2D090C2E008FC23B /* ProgressCircleView.swift */,
+				6B3FBE702D091920008FC23B /* ActivityCard.swift */,
 			);
 			path = components;
+			sourceTree = "<group>";
+		};
+		6B3FBE6D2D0917E7008FC23B /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,8 +172,8 @@
 				6B3FBE632D090236008FC23B /* HomeView.swift in Sources */,
 				6B3FBE6C2D090C2E008FC23B /* ProgressCircleView.swift in Sources */,
 				6B3FBE652D09027A008FC23B /* HistoricDataView.swift in Sources */,
-				6B16FFD92D08FA9B00F0B07F /* ContentView.swift in Sources */,
 				6B3FBE6A2D0907B4008FC23B /* FitnessWidgets.swift in Sources */,
+				6B3FBE712D091920008FC23B /* ActivityCard.swift in Sources */,
 				6B16FFD72D08FA9B00F0B07F /* fitnessAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
